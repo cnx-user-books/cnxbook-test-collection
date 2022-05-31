@@ -1,0 +1,239 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>Testing Revisions - CSS</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36730</md:content-id>
+  <md:title>Testing Revisions - CSS</md:title>
+  <md:abstract>The module presents the concepts used in the CSS programming language.</md:abstract>
+  <md:uuid>3d47e34a-7694-4cd8-892e-df77149de66a</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="prerequisite">
+      <link url="http://cnx.org/content/m42730/latest/" strength="2">CSS introduction</link>
+    </link-group>
+    <link-group type="supplemental">
+      <link url="http://cnx.org/content/m36722/latest/" strength="2">Displaying XML with CSS</link>
+      <link url="http://cnx.org/content/m41186/latest/" strength="2">HTML5</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+  <section id="eip-Introduction"><title>Introduction</title><para id="eip-98">Cascading Style Sheets (abbreviated CSS) are used to describe how (X)HTML or XML text is to be presented. This module is currently a commented link list of important entry points for reading about CSS.
+</para><para id="eip-116"><link url="http://cnx.org/content/m42730/latest/">This module</link> gives a simple example how a CSS style sheet works.</para><para id="eip-165"><title>Content of this module</title><list id="toc"><item><link target-id="eip-CSS_rules">CSS rules</link></item>
+<item><link target-id="eip-Internal_and_external_style_sheets">Internal and external style sheets</link></item>
+<item><link target-id="eip-Reference">Reference</link></item>
+<item><link target-id="eip-Tutorial">Tutorial</link></item>
+<item><link target-id="eip-Layout_with_CSS">Layout with CSS</link></item>
+<item><link target-id="eip-Validator">Validator</link></item>
+<item><link target-id="eip-CSS_3">CSS 3</link></item>
+<item><link target-id="eip-Implementation">Implementation</link></item>
+<item><link target-id="eip-CSS_versus_XSL">CSS versus XSL</link></item>
+<item><link target-id="eip-CSS_in_mobile_devices">CSS in mobile devices</link></item>
+<item><link target-id="eip-Media_queries">Media queries</link></item>
+<item><link target-id="eip-Frameworks">Frameworks</link></item>
+<item><link target-id="eip-Web_fonts">Web fonts</link></item>
+<item><link target-id="eip-XHTML_plus_CSS_to_PDF">XHTML plus CSS to PDF</link></item>
+<item><link target-id="eip-Further_Reading">Further Reading</link></item>
+
+</list></para>
+
+
+</section>
+
+<section id="eip-CSS_rules"><title>CSS rules</title><para id="eip-286">A CSS file consists of statements which are either at-rules or rule sets (often just called rules).
+
+A rule set (rule) consists of a selector and a declaration block which contains one or more declarations (more see <link url="http://www.w3.org/TR/CSS21/syndata.html" window="new">CSS 2.1 specification</link>). A declaration contains a property and a value (e.g. "color" and "green"), see example below.
+
+These rules describe how the formatting should take place.</para><para id="eip-975">Below are some sample rules. In the first part one or several selectors are given and in the second part there are one or more attribute-value pairs enclosed by curly brackets.</para><code id="eip-5" display="block">/* Sample rules */
+
+h1, h2 {color: green}
+
+#box {width: 70%}
+
+.topic {color: red}</code><list id="eip-889"><title>Selector types</title><item><code display="inline">h1</code> and <code display="inline">h2</code> are tag selectors</item>
+<item><code display="inline">#box</code> is a selector for an identification</item>
+<item><code display="inline">.topic</code> is a selector for a class</item></list><para id="eip-282">A series of <link url="http://www.css3.info/selectors-test/">tests</link> for selectors.</para></section>
+
+
+<section id="eip-Internal_and_external_style_sheets"><title>Internal and external style sheets</title><para id="eip-296">A style sheet may reside in a separate file (<term>external style sheet</term>) or within an (X)HTML file (<term>internal style sheet</term>).
+
+</para><code id="eip-186" display="block"><title>External style sheet</title>&lt;head&gt;
+&lt;link rel="stylesheet" type="text/css" media="screen, projection, handheld, print" href="css/general.css" /&gt;
+&lt;link rel="stylesheet" type="text/css" media="print" href="css/ourPrintStyleSheet.css" /&gt;
+&lt;/head&gt; </code><para id="eip-457">In the case of the code above taken from a HTML file we load a general style sheet for different kinds of output media called <code>general.css</code> and a specific one for printing (<code>ourPrintStyleSheet.css</code>). The style sheet for printing adds and overrides some rules to put the content onto paper.</para><code id="eip-111" display="block"><title>Internal stylesheet (HTML)</title>&lt;style type="text/css"&gt;
+  h1 {
+      color: green;
+     }
+  &lt;/style&gt;
+</code><code id="eip-482" display="block"><title>Internal stylesheet (XHTML)</title>&lt;style type="text/css"&gt;&lt;![CDATA[
+  h1 {
+    color: green;
+   }
+]]&gt;&lt;/style&gt;
+</code><para id="eip-411"><title>@import rule</title>The <code>@import</code> rule (<link url="http://www.w3.org/TR/CSS21/cascade.html#at-import">ref.</link>) allows you to import rules from another style sheet into your current one. For an example see ´web fonts´ below.</para></section>
+
+
+
+
+<section id="eip-Reference"><title>Reference</title><para id="eip-880">CSS 2.1
+<link url="http://www.w3.org/TR/CSS21/" window="new">specification</link> (implemented by most browsers); an <link url="http://meyerweb.com/eric/css/references/index.html" window="new">index</link>
+
+
+</para><para id="eip-943">All W3C <link url="http://www.w3.org/standards/techs/css#w3c_all" window="new">CSS standards and drafts</link></para><para id="eip-918">The link above includes the documents commonly called CSS 3 which consists of different modules. They are implemented to various degrees in the current browsers.</para></section>
+
+
+<section id="eip-Tutorial"><title>Tutorial</title><para id="eip-91">w3.org: <link url="http://www.w3.org/Style/Examples/011/firstcss" window="new">Starting with HTML and CSS</link> (basic introduction)
+
+
+</para><para id="eip-390">Complete course with interactive exercises <link url="http://www.w3schools.com/css/default.asp" window="new">w3schools</link> 
+
+
+</para><para id="eip-901">Searching for the key words <code>css cheat sheet</code> provides helpful links if you have learned CSS in the past. This brings up for example this list which leads to <link url="http://www.allwebdesignresources.com/webdesignblogs/graphics/30-css-cheat-sheets-quick-reference-guides/" window="new">30 examples</link> 
+.
+ </para></section>
+ 
+ 
+ 
+ <section id="eip-Layout_with_CSS"><title>Layout with CSS</title><para id="eip-442">For doing layout with CSS the 'position' attribute and the box model are used. In the past this was difficult because the box model implemented by the Internet Explorer (IE) differed from the web standard and from the box model implemented by other browsers. In the meantime the Internet Explorer supports the standard W3C box model so using CSS in modern browsers is made easier as there needs not to be a 'switch' anymore for IE and the other browsers. CSS 3 introduces the <link url="http://caniuse.com/#feat=css3-boxsizing"><code>box-sizing</code></link> property which allows to set how the box size is calculated (<link url="https://css-tricks.com/box-sizing/">https://css-tricks.com/box-sizing/</link>).
+</para><para id="eip-517"><figure id="box_model"><title>CSS box model</title><media id="W3C_CSS_box_model" alt="W3C box model">
+     <image mime-type="image/png" src="../../media/CSS_Box_Model_2016-03-10.png"/>
+   </media>
+   
+ <caption>The W3C standard box model
+   </caption></figure></para><para id="eip-842"><title>How to position elements</title><link url="http://learnlayout.com/position.html">http://learnlayout.com/position.html</link></para><para id="eip-369">The default is that elements are positioned <code>static</code>. This means that the element is not positioned in special way. It is in the normal flow of elements.</para><para id="eip-115"><media id="relative_position_example" alt="Use of relative position.">
+	   
+  <image mime-type="image/jpeg" src="../../media/CSS-relative-position_learnlayout.com.png"/>
+		 
+</media></para></section>
+   
+   
+   
+ <section id="eip-Validator"><title>Validator</title><para id="eip-961">A validator checks if a CSS file contains no erroneous CSS selectors and rules. <link url="http://jigsaw.w3.org/css-validator/" window="new">W3C validator</link>
+</para></section>
+
+
+
+<section id="eip-CSS_3"><title>CSS 3</title><para id="eip-557">CSS3 (CSS level 3) builds on CSS level 2. Unlike CSS2 which is a single specification document CSS3 is devided into several  separate recommendations documents. They are called "modules". See
+<link url="http://www.w3.org/Style/CSS/current-work#table" window="new">table of specifications</link> of the W3C.
+
+</para><para id="eip-757">News about the implementation of the new features <link url="http://www.css3.info" window="new">css3.info</link>. 
+
+Web site which tests <link url="http://css3test.com/" window="new">CSS3 implementation </link> in browsers. 
+
+</para><para id="eip-133">Interactive construction of CSS3 code (e.g. rounded corners, shadow, etc) <link url="http://css3please.com" window="new">css3please.com</link>
+</para><list id="eip-74"><item>Media queries (<link url="https://www.w3.org/TR/css3-mediaqueries/" window="new">W3 recommendation</link> June 2012);
+<link url="https://www.cnx.org/content/m42727/latest/">media query examples</link> (cnx module)
+</item>
+<item>Selectors level 3 (
+<link url="https://www.w3.org/TR/css3-selectors/">W3C recommenation</link>, Sept 2011), 
+<link url="http://www.css3.info/selectors-test/">tests</link>
+</item>
+<item><link url="http://www.w3.org/TR/css3-multicol/" window="new">Multicolumn Layout</link>
+e.g. <code>column-width: 20em;</code>
+</item>
+<item>Rounded Corners (<link url="http://www.cssportal.com/css3-rounded-corner/" window="new">exploration / code generator</link>)</item>
+<item>Web Fonts (see <link target-id="eip-Web_fonts">example below</link>)</item>
+<item>Text Wrapping
+(<link url="https://www.w3.org/TR/css-text-3/" window="new">CSS Text Module Level 3</link>)
+</item>
+<item>Text Stroke</item>
+<item>Transitions</item>
+<item>2d Transforms (usage <link url="https://github.com/sergeylukin/css-3d-bar-graph">example</link> to create 3d effect)</item>
+<item>Animations (<link url="https://daneden.github.io/animate.css/" window="new">examples</link>)</item>
+<item>Gradients</item>
+
+
+
+</list></section>
+
+
+<section id="eip-Implementation"><title>Implementation</title><list id="eip-795"><item><link url="http://www.quirksmode.org/compatibility.html" window="new">http://www.quirksmode.org/compatibility.html </link></item>
+<item>  <link url="http://www.caniuse.com/" window="new">http://www.caniuse.com/</link> answers in which web browsers a particular CSS selecter or attribute may be used.
+</item>
+<item>Gecko (used in Firefox) <link url="https://developer.mozilla.org/en/Mozilla_CSS_support_chart" window="new">CSS support</link> chart</item></list></section>
+
+
+<section id="eip-Debugging"><title>Debugging</title><para id="eip-661">There is an add-on called <link url="http://getfirebug.com/" window="new">Firebug</link> to the Firefox web browser which helps to debug CSS style sheets. It helps as well to learn about CSS <link url="http://getfirebug.com/" window="new">http://getfirebug.com/css</link>.
+
+</para><para id="eip-793">InternetExplorer 8, 9 and 10 give access to developer tools 
+
+<link url="http://msdn.microsoft.com/en-us/ie/ff468705.aspx" window="new">(Manual)</link>
+
+through the F12 key. 
+
+
+
+
+</para></section>
+
+
+
+<section id="eip-CSS_versus_XSL"><title>CSS versus XSL</title><para id="eip-945">Why does W3C recommend two different style languages? Which one should you use? Basically, the rule can
+be summarized very succinctly: Use CSS when you can, use XSL when you must.
+ <link url="http://www.w3.org/Style/CSS-vs-XSL" window="new">http://www.w3.org/Style/CSS-vs-XSL</link></para></section>
+ 
+ 
+<section id="eip-CSS_in_mobile_devices"><title>CSS in mobile devices</title><para id="eip-143"><link url="http://www.w3.org/standards/techs/cssmobile#w3c_all" window="new">CSS mobile</link> (current status) aims at describing a subset of CSS useful for mobile devices.</para></section>
+ 
+ 
+ <section id="eip-Media_queries"><title>Media queries</title><para id="eip-730">CSS <term>media queries</term> <link url="http://www.w3.org/TR/css3-mediaqueries/" window="new">(W3C spec)</link> allow that style rules are only applied to specific output media, i.e. screen, print, handheld or other. They can as well depend on conditions like display width. The following example demonstrates the idea
+
+</para><code id="eip-10" display="block">@media (max-width: 320px) {
+           /* rules for mobile devices go here */
+  }
+
+@media (min-width: 321px) {
+           /* rules for devices with larger screens go here */
+  }
+
+</code><para id="eip-128"><link url="http://cnx.org/content/m42727/latest/">More</link> about media queries; collection of <link url="http://mediaqueri.es/">example sites</link></para><para id="eip-882"><link url="http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly">Use of media queries</link> to implement a responsive navigation, i.e. a navigation which works on desktop or laptop computers where there is a cursor and on touch devices (mobile phones, tablets).</para></section>
+
+
+<section id="eip-Frameworks"><title>Frameworks</title><para id="eip-412">A CSS framework is one or more CSS files which include style declarations on which you can build by either extending or replacing them. The aim is that you do can rely on ready-made designs and do not need to create workarounds for the browser inconsistencies. </para><para id="eip-387"><link url="http://http://getskeleton.com/" window="new">Skeleton</link>: Responsive boilerplate</para><para id="eip-277"><link url="http://getbootstrap.com/" window="new">Bootstrap</link> Bootstrap is a popular HTML, CSS, and JS framework for developing responsive projects.</para><para id="eip-307"><link url="http://purecss.io/" window="new">http://purecss.io/</link> -- a set of small, responsive CSS modules; see also <link url="https://smacss.com/">https://smacss.com/</link> (Scalable and Modular Architecture for CSS).</para></section>
+
+
+<section id="eip-Web_fonts"><title>Web fonts</title><para id="eip-294">Current browsers may load fonts front the web (<code>@font-face</code> property) and thus support the font part of <link url="http://www.w3.org/TR/css3-fonts/" window="new">CSS 3</link>. 
+
+</para><para id="eip-702"><title>Google font service</title>Google provides a 
+
+<link url="http://www.google.com/webfonts#ChoosePlace:select" window="new">service</link> from which you can choose free fonts. It generates some code which you can add to your website. They as well provide a
+
+<link url="http://code.google.com/apis/webfonts/" window="new">font API</link> and host a <link url="http://code.google.com/p/googlefontdirectory/" window="new">repository</link> with free fonts.
+
+So you might add the <term>Gentium</term> font by adding an import rule at the beginning of your style sheet
+
+</para><code id="eip-157" display="block">@import url(http://fonts.googleapis.com/css?family=Gentium+Basic&amp;subset=latin,latin-ext);</code><para id="eip-250">But you may as well copy a free font to a directory of your own website and serve it from there.
+For an example of loading a font see below. Gentium is a free font under the Open Font License (OFL).
+</para><code id="eip-606" display="block">@font-face {
+  font-family: Gentium;
+  src: url(http://yoursite/fonts/Gentium.ttf);
+}
+
+p { font-family: Gentium, serif; }</code></section>
+
+
+<section id="eip-XHTML_plus_CSS_to_PDF"><title>XHTML plus CSS to PDF</title><para id="eip-922"><list id="eip-id1165267335537"><item><link url="http://www.alistapart.com/articles/boom/" window="new">Printing a book with CSS</link> (PrinceXML)</item>
+<item><link url="http://pd4ml.com/" window="new">pd4ml</link> (free for non-commercial use)</item>
+<item>...</item>
+
+
+</list>
+
+
+</para></section>
+
+
+<section id="eip-Further_Reading"><title>Further Reading</title><para id="eip-616"><link url="http://www.smashingmagazine.com/2011/02/16/css-useful-coding-techniques-and-design-solutions//#more-90289" window="new">Useful coding techniques</link>
+
+</para><para id="eip-772">W3C CSS <link url="https://test.csswg.org/harness/" window="new">Test Harness</link>
+
+
+</para></section><para id="delete_me">
+     <!-- Insert module text here -->
+  </para>
+</content>
+
+</document>

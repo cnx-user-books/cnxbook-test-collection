@@ -1,0 +1,172 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>HTML5</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m41186</md:content-id>
+  <md:title>HTML5</md:title>
+  <md:abstract>HTML5 is the fifth revision of the HTML standard. It provides various enhancements and is still work in progress. This module provides links to information about HTML5 which lead you into the topic in-depth.</md:abstract>
+  <md:uuid>863892c3-83dc-49b9-83b8-fa659feb56b8</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="example">
+      <link url="http://cnx.org/content/m41595/latest/" strength="2">Structural semantic tags in HTML5</link>
+    </link-group>
+    <link-group type="supplemental">
+      <link url="http://cnx.org/content/m38309/latest/" strength="3">What is HTML5?</link>
+      <link url="http://cnx.org/content/m36730/latest/" strength="3">CSS resources</link>
+      <link url="http://cnx.org/content/m38582/latest/" strength="3">JavaScript resources</link>
+      <link url="http://cnx.org/content/m43038/latest/" strength="3">Document Object Model</link>
+      <link url="http://cnx.org/content/m45584/latest/" strength="1">Creating an XHTML file with Notepad++</link>
+    </link-group>
+    <link-group type="prerequisite">
+      <link url="http://cnx.org/content/m34546/latest/#A_brief_introduction_to_XML" strength="2">Introduction to XML</link>
+      <link url="http://cnx.org/content/m42730/latest/" strength="2">CSS Introduction</link>
+      <link url="http://cnx.org/content/m43033/latest/" strength="2">HTML, CSS and JavaScript</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+  <section id="eip-343"><title>Introduction</title><para id="eip-944">The structure of a HTML5 document may be simpler than that of a HTML4 document. There is only one document type <code>&lt;!DOCTYPE html&gt;</code>. Older browsers interpret this fine as they do not know about the HTML5 document type and try to do the best they can to render the page. Newer browsers know how to interpret HTML5.</para><para id="eip-741">The Web Hypertext Application Technology Working Group (WHATWG) does not speak of HTML5. They call it just HTML without a version number.</para><code id="eip-403-xhtml5" display="block"><title>Minimal document</title>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;The title of the document&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+The text ...
+&lt;/body&gt;
+
+&lt;/html&gt; <caption>Simple correct HTML5 template (http://www.w3.org/TR/html5/semantics.html#semantics)</caption></code><code id="eip-403" display="block">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+&lt;title&gt;The title of the document&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+The text ...
+&lt;/body&gt;
+
+&lt;/html&gt; <caption>The same as above but in XHTML syntax</caption></code>
+
+
+
+
+
+</section>
+
+
+  
+  <section id="HTML5CSSJavaScript"><title>HTML5 with CSS and JavaScript</title><para id="extendedMeaningOfHTML5">In the strict sense HTML5 is the follow-up specification to HTML4. But people often mean more when they talk about HTML5. HTML5 used as umbrella term includes extended functions of CSS (CSS3) and JavaScript (ECMAscript version 5). With this it is possible to write complete web applications in one file.</para><code id="eip-858" display="block"><title>Minimal template with CSS and JavaScript</title>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;html xml:lang="en" lang="en"&gt;
+&lt;head&gt;
+
+&lt;style&gt;&lt;![CDATA[
+
+h1   {color: red;
+     }
+
+]]&gt;
+&lt;/style&gt;
+
+
+
+&lt;/head&gt;
+
+
+&lt;body&gt;
+
+&lt;h1&gt;Beverages&lt;/h1&gt;
+&lt;ul id="beverages"&gt;
+&lt;li&gt;Coffee&lt;/li&gt;
+&lt;li&gt;Tea&lt;/li&gt;
+&lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;
+&lt;span id="note"&gt;&lt;/span&gt;
+
+
+&lt;script&gt;
+&lt;![CDATA[
+
+
+// JavaScript statements
+// This will be evaluated after the document has been loaded
+// making it possible to easily access DOM elements.
+
+var list = document.getElementById("beverages");
+var listlength = list.children.length;
+console.log(listlength);
+var note = document.getElementById("note");
+console.dir(note);
+note.textContent = listlength + " types of beverages";
+ 
+
+]]&gt;
+&lt;/script&gt;
+
+
+&lt;/body&gt;
+&lt;/html&gt;<caption>Template in XHTML5 syntax demonstrating access to a DOM element</caption></code><para id="eip-270"><title>View the XHTML5 template locally</title>View the <link url="MinimalHTML5CSSJavaScript.xhtml" window="new">template</link> in your browser. You then may save it and start changing it. Make sure it has the file extension <code>.xhtml</code> for IE9 to display a local file in IE9 mode. In addition Firefox and Opera still display it properly if the file name extension is <code>.xml</code>. </para>
+
+
+
+<list id="eip-307"><title>Comments</title><item>The document starts with a declaration that it is encoded as an XML file.</item>
+<item>The root element is an <code>&lt;html&gt;...&lt;/html&gt;</code> node. It has two daughter nodes: <code>&lt;head&gt;...&lt;/head&gt;</code> and <code>&lt;body&gt;...&lt;/body&gt;</code>.</item>
+<item>The head contains the style information. It is contained in <code>&lt;style type="text/css"&gt;...&lt;/style&gt;</code>.</item>
+<item>The actual data to be displayed is in the body part.</item>
+<item>The CDATA tells the XML parser to treat the following code as data. This means that wedges (<code>&lt;&gt;</code>) should not be considered</item>
+<item>The JavaScript code shows the method <code>getElementById</code> to access the Document Object Model (DOM). All HTML elements are accessible this way.</item>
+<item>The JavaScript code is executed once at the end of loading the file.</item>
+<item>The <code>children</code> method gives back all HTML elements of a particular parent HTML Element.</item>
+<item><code>console.log(listlength)</code> and <code>console.dir(note)</code> may be used for debugging purposes. The output will be displayed on the console accessible for example in Firefox 9 through 'Tools'/'Web Developer'/'Web Console'. Other browsers have similar tools.</item>
+<item>This example contains all the CSS and JavaScript code. Most often this code is put into two separate files. Then two links in the main HTML file connect to them.</item></list>
+
+
+<para id="eip-90"><title>Display in Firefox 9 with web console opened  </title><media id="webConsoleInFireFox9" alt="Web console with minimal sample XHTML5 file"><image mime-type="image/png" src="../../media/FireFox9withMinimalHTML5CSSJavaScriptAndWebConsole.PNG"/></media></para>
+
+
+
+<para id="eip-106"><title>MSDN about IE9</title><link url="http://blogs.msdn.com/b/ie/archive/2010/11/01/xhtml-in-ie9.aspx">MSDN</link>: "Adding a <code>&lt;!DOCTYPE&gt;</code> pointing to an XHTML DTD does NOT influence whether a page is treated as HTML or XHTML. XHTML support for files on the web can only be triggered by the MIME type of the response from the web server. This is true both in IE9 and other browsers. This MIME type should be "application/xhtml+xml" (though you can technically use any supported XML mime type). Local files with ".xht" or ".xhtml" extensions will also be opened as XHTML".
+</para><para id="eip-126"><title>More on DOM access</title><link url="http://cnx.org/content/m43038/latest/">Document Object Model</link></para>
+</section>
+
+
+
+<section id="eip-962"><title>Further Reading</title><para id="eip-867"><title>HTML5 in action</title><link url="http://www.manning.com/crowther2/">First chapter</link> of Robert Crowther, Joe Lennon, and Ash Blue, HTML5 in Action, Manning, February 2014. <link url="http://www.manning.com/crowther2/HTML5inAction_CH05.pdf">Chapter 5</link>; source code on <link url="https://github.com/html5-ia/html5-ia/">github</link>.</para><para id="eip-443"><title>Comparison to other technologies</title><link url="http://www.i-programmer.info/professional-programmer/i-programmer/3539-2011-the-year-html5-won.html">2011 - The Year HTML5 Won</link>
+</para>
+
+<para id="eip-370"><title>Dive into HTML 5</title><link url="http://diveintohtml5.info/" window="new">on-line book</link> by Mark Pilgrim; <link url="http://creativecommons.org/licenses/by/3.0/" window="new">CC-BY-3.0</link>;  <link url="http://diveinto.html5doctor.com/" window="new">updated fork</link>; published on paper by O’Reilly. 
+</para>
+
+
+<para id="eip-118"><title>Extended version of the template</title>Module <link url="http://cnx.org/content/m42771/latest/">anonymous functions</link> has an example where a button is added to the XHTML template given in this module. </para><para id="eip-87"><title>XHTML5 editor</title>There are many editors for creating XHTML5 files. Netbeans for example may be <link url="http://cnx.org/content/m37275/latest/">used for this</link>.</para>
+
+
+<para id="eip-374"><title>On-line editor</title><link url="https://thimble.mozilla.org">Mozilla thimble</link> is an on-line editor for learning HTML5.</para><para id="eip-367"><title>HTML5 please</title>A <link url="http://html5please.com/" window="new">web site</link> with recommendations which HTML5 features are ready for use and under which conditions. </para>
+
+
+<para id="eip-78"><title>HTML5 test</title>This <link url="http://html5please.com/" window="new">web site</link> has a browser feature detection test as well as references to the W3C standard for every feature.</para>
+
+</section><section id="eip-82"><title>Further reading specific topics</title><para id="eip-409"><title>Local storage</title>HTML5 capable browsers have added a new <link url="http://cnx.org/content/m42785/latest/" window="new">local storage</link> facility which allows to save data between subsequent visits of a web page. This feature is similar to cookies but with more storage capacity and it is better accessible.</para><para id="eip-878"><title>How to write a game</title>A tutorial which shows 
+<link url="http://html5center.sourceforge.net/how-to-write-a-brikbloc-game-with-html5-svg-and-canvas" window="new">
+http://html5center.sourceforge.net/how-to-write-a-brikbloc-game-with-html5-svg-and-canvas
+</link></para></section><section id="HTML5LinksSection"><title>More links</title><para id="eip-459"><title>Presentation</title><link url="http://tantek.com/presentations/2011/10/html5-now/" window="new">http://tantek.com/presentations/2011/10/html5-now/</link> (written in HTML 5)
+
+</para>
+
+
+<para id="eip-572"><title>Specifications</title><link url="http://www.w3.org/TR/html5/" window="new">http://www.w3.org/TR/html5/</link> and
+<link url="http://www.whatwg.org/specs/web-apps/current-work/multipage/" window="new">http://www.whatwg.org/specs/web-apps/current-work/multipage/</link>
+</para>
+
+
+
+
+<para id="eip-282"><title>Microsoft Internet Explorer 9</title>Microsoft Internet Explorer 9 was released in March 2011. It adopted HTML5 to a large part, something other browser implementations had done before. <link url="http://msdn.microsoft.com/en-us/ie/aa740476.aspx" window="new">Learn HTML5</link> (Internet Explorer Developer Center). <link url="http://msdn.microsoft.com/en-us/ie/ff468705.aspx" window="new">IE9 Developer Tools</link>. More about <link url="http://blogs.msdn.com/b/ie/archive/2010/11/01/xhtml-in-ie9.aspx">IE9 and XHTML</link>.</para><para id="eip-188"><title>Differences from HTML4</title><link url="http://dev.w3.org/html5/html4-differences/" window="new">http://dev.w3.org/html5/html4-differences/</link></para><para id="eip-592"><title>Mozilla Developer Network</title><link url="https://developer.mozilla.org/en/HTML/HTML5" window="new">HTML5</link> start page</para><para id="eip-502"><title>IBM developerWorks</title><link url="http://www.ibm.com/developerworks/web/library/wa-html5fundamentals/">HTML 5 fundamentals</link></para><para id="eip-160"><title>modernizr</title><link url="http://www.modernizr.com/" window="new">http://www.modernizr.com/</link>. Modernizr is a JavaScript library which helps to detect if a HTML5 feature is supported in a web browser or not.</para><para id="eip-217"><title>How well does a browser support HTML5?</title><link url="https://html5test.com/" window="new">https://html5test.com/</link></para></section><para id="delete_me">
+     <!-- Insert module text here -->
+  </para>
+</content>
+
+</document>
