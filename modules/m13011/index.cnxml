@@ -1,0 +1,14 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>test</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>d327707d-07fb-45c0-a20f-81c4c31088f6</md:uuid>
+</metadata>
+  <content>
+    <para id="delete_me">
+       <!-- Insert module text here -->
+    </para>   
+
+<media id="idm9458208" alt="" display="block"><labview src="Phase_Shift_Demo-1_WEB.llb" viname="Phase_Shift_Demo-1.vi" version="8.0" mime-type="application/x-labviewrpvi80" height="575" width="1000"><param name="lvfppviname" value="Phase_Shift_Demo-1.vi"/></labview></media>
+
+  </content>
+  
+</document>
