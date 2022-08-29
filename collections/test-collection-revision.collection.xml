@@ -1,12 +1,13 @@
-<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en">
+<?xml version="1.0"?>
+<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en" authors="Test Test">
   <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">
     <md:content-id>col11421</md:content-id>
     <md:title>Test Collection Revision</md:title>
     <md:language>en</md:language>
     <md:license url="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</md:license>
     <md:uuid>cc51d095-abf8-4717-8607-bedc1a3c1b39</md:uuid>
-<md:slug>test-collection-revision</md:slug>
-</metadata>
+    <md:slug>test-collection-revision</md:slug>
+  </metadata>
   <col:content>
     <col:module document="m36730"/>
     <col:module document="m41186"/>
