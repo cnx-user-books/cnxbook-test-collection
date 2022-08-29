@@ -1,29 +1,14 @@
-<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en">
+<?xml version="1.0"?>
+<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en" authors="Test Test">
   <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">
-  <md:content-id>col11504</md:content-id>
-  <md:title>Test collection</md:title>
-  
-  
-  <md:license url="http://creativecommons.org/licenses/by/3.0/"/>
-  <md:language>en</md:language>
-
-  
-
-  
-  
-  
-  
-  
-
-  <md:uuid>57f5a764-e823-4183-897a-2aae6f2c3de4</md:uuid>
-<md:slug>test-collection</md:slug>
-</metadata>
-
+    <md:content-id>col11504</md:content-id>
+    <md:title>Test collection</md:title>
+    <md:license url="http://creativecommons.org/licenses/by/3.0/"/>
+    <md:language>en</md:language>
+    <md:uuid>57f5a764-e823-4183-897a-2aae6f2c3de4</md:uuid>
+    <md:slug>test-collection</md:slug>
+  </metadata>
   <col:content>
-    
-      <col:module document="m13011"/>
-        
-      
-    
+    <col:module document="m13011"/>
   </col:content>
 </col:collection>
